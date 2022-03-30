@@ -1,0 +1,31 @@
+
+frameIndex
+
+
+//main 
+
+foreach gfx:
+    updateUbo(frameIndex)
+
+cmdbuffers[]
+cmdBuffers.push(main.cmdBuffer)
+
+foreach Camera[1:]:
+    cmdbuffers.push(camera.cmdbuffer)
+    
+    foreach gfx:
+        updateUbo(CameraIndex + main.frames.size())
+
+
+
+
+offset = 0;
+
+
+foreach Camera
+    cmdBuffers.push(Camera.cmdbuffers[offset + Camera.currentframe])
+
+    foreach gfx:
+        updateUbo(offset + Camera.currentframe);
+
+    offset += Camera.frames.size()

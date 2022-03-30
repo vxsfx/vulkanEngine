@@ -1,0 +1,67 @@
+//Scene scene;
+    currentScene = new Scene();
+
+    Graphics::init();
+
+    //use pointers for dynamic objects/class (will not go out of scope when chuck in vector)
+
+    Object* cameraObject = new Object("Camera");
+    Object* modelObject = new Object("model-test-container");
+
+    Transform* cameraTransform = new Transform( "camera-transform", {2.0f, 2.0f, 2.0f}, {0.0f, 0.0f, 0.0f});
+    cameraObject->addComponent(cameraTransform);
+
+
+    //make camera
+    Camera* main = new Camera("main-Camera", Graphics::swapExtent.width, Graphics::swapExtent.width, 2);
+    Graphics::bindCamera(main->images);
+    main->setProjection(
+        main->extent.width/main->extent.height, 
+        90.0f, 0.1f, 10.0f 
+        );
+    main->cameraTransform = cameraTransform;
+    main->lookAt({ 0.0f, 0.0f, 0.0f });
+    main->createImageViews(Graphics::swapImageFormat);
+    main->createDepthResource();
+
+    main->createRenderPass();
+    main->createFrameBuffers();
+
+
+    Model* model = new Model("model-test", "res/models/modelTest.obj", "res/textures/modelTest.png");
+
+    //for camera texture
+    //std::vector<VkDescriptorImageInfo> imageInfos = main->getDescriptorImageInfos();
+    
+
+
+    model->createBuffers(main->images.size());
+
+    //model texture
+    VkDescriptorImageInfo imageInfo{};
+    imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    imageInfo.imageView = *model->textureView;
+    imageInfo.sampler = *model->textureSampler;
+    
+    std::vector<VkDescriptorImageInfo> imageInfos = { imageInfo, imageInfo };
+    //createdescsetlayouts
+    model->createDescriptorSets(2, imageInfos);
+    model->createPipeline(main->renderPass, main->extent);
+
+
+
+
+    main->createCommandBuffers();
+
+
+    //cameraObject.components.push_back(&main);
+    cameraObject->addComponent(main);
+    modelObject->addComponent(model);
+
+    //scene.objects.push_back(&cameraObject);
+    currentScene->addObject(cameraObject);
+    currentScene->addObject(modelObject);
+
+    Camera::main = main;
+
+    //currentScene = &scene;

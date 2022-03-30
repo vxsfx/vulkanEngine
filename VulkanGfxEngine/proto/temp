@@ -1,0 +1,43 @@
+addShader
+addShader
+
+add vertIN
+
+add IA
+
+add DynamicStates
+
+createLayout
+
+finish
+
+
+
+
+
+    std::vector<VkShaderModule> shaderModules;
+    std::vector<VkPipelineShaderStageCreateInfo> shaderInfos;
+
+
+
+
+    VkPipelineDepthStencilStateCreateInfo* depthStencil = nullptr;
+
+    //for textures 
+    VkPipelineMultisampleStateCreateInfo* sampInfo = nullptr;
+
+    VkPipelineColorBlendStateCreateInfo* blendInfo = nullptr;
+
+    VkPipelineViewportStateCreateInfo* vpInfo = nullptr;
+
+
+    VkPipelineRasterizationStateCreateInfo* rastInfo = nullptr;
+
+    VkPipelineInputAssemblyStateCreateInfo* inputAssembly = nullptr;
+
+    VkPipelineVertexInputStateCreateInfo* vertInInfo = nullptr;
+    VkVertexInputBindingDescription* bindDesc = nullptr;
+    std::vector<VkVertexInputAttributeDescription> attDescs;
+
+
+    VkPipelineDynamicStateCreateInfo* stateInfo = nullptr;

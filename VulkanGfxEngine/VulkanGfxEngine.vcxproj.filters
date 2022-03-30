@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{e7d6b3a5-3cac-4e5e-a1ce-f12f7e51e764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Headers">
+      <UniqueIdentifier>{d6a56a29-1acc-41dc-92ed-b7d3ab34fd35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{b030ec02-b9ee-461c-8038-87828b72e9f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Example\App.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Example\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Object\Components\BaseObjectGfx.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Object\Components\Camera.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Object\Components\Model.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Object\Components\Component.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Object\Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Object\Components\Transform.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Object\Components\Primitives.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Object\Components\Colliders.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Example\Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Scene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Window.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\util\include.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Object\Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Object\Components\BaseObjectGfx.h">
+      <Filter>Components\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\util\buffer.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Object\Components\Component.h">
+      <Filter>Components\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\util\loader.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\util\image.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\util\Pipeline.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\util\Debug.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Object\Components\Camera.h">
+      <Filter>Components\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Object\Components\Model.h">
+      <Filter>Components\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\util\math.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Object\Components\Transform.h">
+      <Filter>Components\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Object\Components\Primitives.h">
+      <Filter>Components\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Object\Components\TransformController.hpp">
+      <Filter>Components\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Input.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Object\Components\Colliders.h">
+      <Filter>Components\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
